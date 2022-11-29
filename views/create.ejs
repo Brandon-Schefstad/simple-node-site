@@ -1,39 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="main.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<h1 class="title">Create A Blog</h1>
-		<nav class="nav">
-			<ul class="navlist">
-				<li>
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="/contact-me">Contact Me</a>
-					<a href="/blogs/create">Create Blog</a>
-				</li>
-			</ul>
-		</nav>
-		<form action="/blogs/create/new" method="GET">
-			<span>Name: </span>
-			<input type="text" name="name" id="name" />
-			<span>Number: </span>
-			<input type="text" name="number" id="number" />
-			<span>Letter: </span>
-			<input type="text" name="letter" id="letter" />
-			<input type="submit" value="Send In The Wolves" />
-		</form>
-		<% if(name) { %>
-		<h3><%= name%></h3>
-		<%}%> <% if(number) { %>
-		<h3><%= number%></h3>
-		<%}%> <% if(letter) { %>
-		<h3><%= letter%></h3>
-		<%}%>
-	</body>
-</html>
+<%- include('./partials/head.ejs') %>
+<body>
+	<%- include('./partials/nav.ejs') %>
+	<h1 class="title">Create A Blog</h1>
+	<form action="/blogs/create/new" method="GET">
+		<span>Name: </span>
+		<input type="text" name="name" id="name" />
+		<span>Number: </span>
+		<input type="text" name="number" id="number" />
+		<span>Letter: </span>
+		<input type="text" name="letter" id="letter" />
+		<input type="submit" value="Send In The Wolves" />
+	</form>
+	<% if(name) { %>
+	<h3><%= name%></h3>
+	<%}%> <% if(number) { %>
+	<h3><%= number%></h3>
+	<%}%> <% if(letter) { %>
+	<h3><%= letter%></h3>
+	<%}%>
+</body>
+<%- include('./partials/foot.ejs') %>
