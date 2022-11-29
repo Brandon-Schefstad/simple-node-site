@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const hostname = 'localhost';
+const hostname = '0.0.0.0';
 const port = 300;
 
 /* Reusable function to serve a specific file in views. 
