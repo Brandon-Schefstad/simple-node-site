@@ -73,3 +73,41 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+.navlist {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	list-style: none;
+	position: fixed;
+	margin-top: 0.3rem;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+nav > ul > li > a {
+	text-decoration: none;
+	font-family: 'Audiowide', sans-serif;
+	color: #f0aed4;
+}
+.wrapper {
+	background: url('./assets/hero.jpg');
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+.main__text {
+	background-color: rgba(255, 255, 255, 0.8);
+	display: grid;
+	padding-inline: 5rem;
+	padding-block: 2rem;
+}
+
+footer {
+	display: block;
+	position: fixed;
+}
